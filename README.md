@@ -1,4 +1,4 @@
-# E-Commerce REST API
+# Ailoitte - E-Commerce REST API
 
 A comprehensive RESTful API for an e-commerce platform built with Node.js, Express.js, and PostgreSQL. This API supports user authentication, product management with Cloudinary image upload, category management, product filtering, shopping cart with persistent pricing, and order processing.
 
@@ -66,8 +66,8 @@ A comprehensive RESTful API for an e-commerce platform built with Node.js, Expre
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd Aloite
+git clone https://github.com/lokiverse2468/Ailoitte.git
+cd Ailoitte
 ```
 
 2. Install dependencies:
@@ -76,15 +76,13 @@ npm install
 ```
 
 3. Set up environment variables:
-```bash
-cp .env.example .env
-```
-
-Edit `.env` file with your configuration:
+Create a `.env` file in the root directory:
 ```env
 PORT=3000
 NODE_ENV=development
 
+DATABASE_URL=your_postgresql_connection_string
+# OR use individual parameters:
 DB_HOST=localhost
 DB_PORT=5432
 DB_NAME=ecommerce_db
@@ -100,15 +98,9 @@ CLOUDINARY_API_SECRET=your_api_secret
 ```
 
 4. Set up the database:
-   - Create a PostgreSQL database named `ecommerce_db` (or your preferred name)
-   - Run the SQL schema file:
-   ```sql
-   -- Run database/schema.sql in your PostgreSQL editor
-   ```
-   - Optionally, run the seed file for sample data:
-   ```sql
-   -- Run database/seed.sql in your PostgreSQL editor
-   ```
+   - Create a PostgreSQL database
+   - Run the SQL schema file: `database/schema.sql`
+   - Optionally, run the seed file for sample data: `database/seed.sql`
 
 5. Start the server:
 ```bash
@@ -230,5 +222,3 @@ ISC
 ## Author
 
 Developed as part of Ailoitte Technologies assignment
-
-
